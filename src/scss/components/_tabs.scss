@@ -1,0 +1,74 @@
+.tabs {
+  position: relative;
+
+  &__panel {
+    position: relative;
+    align-items: flex-start;
+    padding: 20px;
+    min-height: 830px;
+
+    @include small-tablet {
+      min-height: 630px;
+    }
+
+    @include mobile {
+      padding: 12px;
+      min-height: 516px;
+    }
+
+    &--active {
+      display: flex;
+    }
+  }
+
+  &__nav {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    padding: 20px;
+    width: 100%;
+    gap: 8px;
+
+    @include mobile {
+      flex-direction: column;
+      padding: 12px;
+    }
+
+    &-item {
+      flex-basis: 33%;
+    }
+
+    &-btn {
+      box-shadow: 0 4px 20px 0 rgba(23, 23, 23, 0.03);
+      color: var(--desktop-black);
+      background: var(--desktop-white);
+
+      &--active {
+        color: var(--desktop-white);
+        background: var(--desktop-primary-orange);
+
+        &:focus {
+          color: var(--desktop-white);
+          background: var(--desktop-primary-orange);
+        }
+      }
+
+      &::after {
+        @include pseudo;
+
+        width: 24px;
+        height: 24px;
+
+        @include bg-contain;
+
+        background-image: url("../img/svg/right_arrow.svg");
+
+        @include small-tablet {
+          width: 12px;
+          height: 12px;
+        }
+      }
+    }
+  }
+}

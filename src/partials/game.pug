@@ -1,0 +1,29 @@
+section.game
+  .container.game__container
+    h2.h1.game__title играй
+    a(href="#").game__chapter-link в раздел
+    ul.list-reset.game__list
+      li.game__item
+        picture.game__picture
+          source(srcset="img/game-image-1.avif", type="image/avif")
+          img.game__image(loading="lazy", src="img/game-image-1.webp", alt="", aria-hidden="true")
+        div.game__item-content
+          div.game__item-accent Найди себе команду
+          div.game__item-desc Игры на районе - это возможность найти с кем поиграть в баскетбол в выходные, или создать свою игру и пригласить других игроков присоединиться.
+          button(type="button").btn-reset.btn-accent.game__item-btn текст кнопки
+      li.game__item
+        picture.game__picture.game__picture--ball
+          source(srcset="img/game-image-2.avif", type="image/avif")
+          img.game__image(loading="lazy", src="img/game-image-2.webp", alt="", aria-hidden="true")
+        div.game__item-content
+          div.game__item-accent Создавай команды
+          div.game__item-desc Игры на районе - это возможность найти с кем поиграть в баскетбол в выходные, или создать свою игру и пригласить других игроков присоединиться.
+          button(type="button").btn-reset.btn-accent.game__item-btn текст кнопки
+      li.game__item
+        picture.game__picture
+          source(srcset="img/game-image-3.avif", type="image/avif")
+          img.game__image(loading="lazy", src="img/game-image-3.webp", alt="", aria-hidden="true")
+        div.game__item-content
+          div.game__item-accent Участвуй в турнирах
+          div.game__item-desc Участвуйте в турнирах вместе с вашей командой. Будьте активными, побеждайте и получайте ачивки и призы от наших спонсоров.
+          button(type="button").btn-reset.btn-accent.game__item-btn текст кнопки

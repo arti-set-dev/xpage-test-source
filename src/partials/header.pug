@@ -1,0 +1,21 @@
+header.header
+  a.logo(style='background-image: url(img/svg/xpage-logo.svg)')
+  .overlay(data-menu-overlay)
+  nav.header__nav(data-menu)
+    button(type="button", aria-label="Закрыть меню", data-menu-close).btn-reset.btn-close.header__nav-close
+    ul.list-reset.header__nav-list
+      li.header__nav-item
+        a(href="#").header__nav-link играть
+      li.header__nav-item
+        a(href="#").header__nav-link смотреть
+      li.header__nav-item
+        a(href="#").header__nav-link учиться
+      li.header__nav-item
+        a(href="#").header__nav-link мероприятия
+  button(type="button", data-burger).btn-reset.burger.header__burger
+    span.burger__line
+    | Меню
+  .header__user
+    span.header__user-name геннадий П.
+    img(src="img/user-photo.webp", width="30", height="30" alt="Геннадий П.").header__user-img
+

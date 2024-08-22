@@ -1,0 +1,41 @@
+// если вы хотите использовать sass-переменные - удалите root
+// colors
+:root {
+  // base
+  --font-family: "DrukWideCyr", sans-serif;
+  --second-family: "Commissioner", sans-serif;
+  --content-width: 1880px;
+  --container-width: calc(var(--content-width));
+  --ui-transition: 0.3s;
+
+  // colors
+  --desktop-primary-orange: #f36722;
+  --desktop-hover-orange: #ff8b3d;
+  --desktop-pressed-orange: #dc4f00;
+  --desktop-primary-blue: #2d69c2;
+  --desktop-hover-blue: #5d94e7;
+  --desktop-pressed-blue: #1652ac;
+  --desktop-primary-green: #2e8d43;
+  --desktop-green-hover: #6ec782;
+  --desktop-pressed-green: #0a7421;
+  --desktop-background: #efefef;
+  --desktop-white: #fff;
+  --desktop-grey-50: #fafafa;
+  --desktop-grey-100: #ececec;
+  --desktop-grey-200: #c4c4c4;
+  --desktop-grey-300: #a1a1a1;
+  --desktop-grey-400: #747474;
+  --desktop-grey-500: #404040;
+  --desktop-black: #202020;
+  --desktop-white-50: rgba(255, 255, 255, 0.5);
+  --desktop-white-20: rgba(255, 255, 255, 0.2);
+  --desktop-white-10: rgba(255, 255, 255, 0.1);
+  --desktop-red-negative: #fa3015;
+  --app-white: #fff;
+  --app-orange: #f36722;
+  --app-black: #202020;
+  --app-graytext: #bdbdbd;
+  --app-graybg: #e8e8e8;
+  --app-graystroke: #dcdcdc;
+  --app-greenaccept: #6ec782;
+}

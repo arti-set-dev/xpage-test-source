@@ -1,0 +1,50 @@
+.hero {
+  border-radius: 20px;
+  padding-top: 8px;
+
+  &__picture {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    overflow: hidden;
+    border-radius: 20px;
+
+    &::before {
+      @include pseudo;
+
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180.00deg, rgba(32, 32, 32, 0) 27.88%,rgba(32, 32, 32, 0.3) 100%);
+    }
+
+    @include mobile {
+      border-radius: 12px;
+    }
+  }
+
+  &__image {
+    border-radius: 20px;
+    height: 100%;
+
+    @include mobile {
+      border-radius: 12px;
+    }
+  }
+
+  &__title {
+    position: relative;
+    z-index: 5;
+    margin-top: auto;
+    margin-bottom: 132px;
+    max-width: 1302px;
+    color: var(--desktop-white);
+
+    @include small-tablet {
+      margin-bottom: 80px;
+    }
+
+    @include mobile {
+      margin-bottom: 151px;
+    }
+  }
+}

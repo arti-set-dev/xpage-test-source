@@ -1,0 +1,11 @@
+.logo {
+  width: 99px;
+  height: 24px;
+
+  @include bg-contain;
+
+  @include mobile {
+    width: 70px;
+    height: 17px;
+  }
+}

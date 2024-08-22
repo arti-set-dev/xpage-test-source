@@ -1,0 +1,152 @@
+.footer {
+  position: relative;
+  margin-top: 120px;
+
+  @include mobile {
+    margin-top: 42px;
+  }
+
+  &__container {
+    position: relative;
+    display: flex;
+    border-top: 1px solid var(--desktop-black);
+    padding-top: 35px;
+    min-height: 655px;
+    gap: 121px;
+
+    @include big-desktop {
+      gap: 30px;
+    }
+
+    @include mobile {
+      padding-top: 20px;
+      min-height: 469px;
+    }
+
+    &::before {
+      @include pseudo;
+
+      position: absolute;
+      right: -300px;
+      bottom: -473px;
+      z-index: -1;
+      width: 991px;
+      height: 988px;
+      background-image: url("../img/game-image-2.webp");
+
+      @include bg-contain;
+
+      @include tablet {
+        right: -250px;
+        bottom: -133px;
+        width: 691px;
+        height: 688px;
+      }
+
+      @include mobile {
+        right: -83px;
+        bottom: 59px;
+        width: 216px;
+        height: 214px;
+      }
+    }
+  }
+
+  &__content {
+    padding-bottom: 30px;
+  }
+
+  &__title {
+    margin-bottom: 32px;
+    max-width: 1132px;
+
+    @include mobile {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 37px;
+
+    @include mobile {
+      flex-direction: column;
+      gap: 24px;
+    }
+  }
+
+  &__link {
+    display: block;
+    height: 30px;
+
+    @include bg-contain;
+
+    &--app-store {
+      width: 132px;
+      background-image: url("../img/svg/app-store.svg");
+    }
+
+    &--google-play {
+      width: 116px;
+      background-image: url("../img/svg/google-play.svg");
+    }
+  }
+
+  &__qr-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 30px;
+    padding: 44px;
+    height: fit-content;
+    max-width: 352px;
+    text-align: center;
+    background: var(--desktop-white);
+
+    @include small-tablet {
+      display: none;
+    }
+  }
+
+  &__qr {
+    margin-bottom: 35px;
+    width: 179px;
+    height: 179px;
+    background-image: url("../img/svg/qr.svg");
+
+    @include bg-contain;
+  }
+
+  &__desc {
+    margin-bottom: 12px;
+    font-family: var(--second-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 160%;
+    color: var(--desktop-grey-400);
+  }
+
+  &__bold {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 140%;
+    text-transform: uppercase;
+    color: var(--desktop-black);
+  }
+
+  &__developer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 140%;
+    text-transform: uppercase;
+    color: var(--desktop-black);
+
+    @include mobile {
+      font-size: 10px;
+    }
+  }
+}

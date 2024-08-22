@@ -1,0 +1,29 @@
+section.hero
+  h1.visually-hidden xpage: спортивный проект
+  .container
+    .tabs.hero__tabs(data-tabs="hero-tabs")
+      .tabs__content
+        .tabs__panel
+          picture.hero__picture
+            source(media="(max-width: 576px)", srcset="img/hero-image-mobile-2.avif", type="image/avif")
+            source(media="(max-width: 576px)", srcset="img/hero-image-mobile-2.webp", type="image/webp")
+            source(srcset="img/hero-image-2.avif", type="image/avif")
+            img.hero__image(loading="eager", src="img/hero-image-2.webp", width="1880", alt="Два баскетболиста из противоположной команды играют в баскетбол")
+          h2.h1.hero__title Найди с кем поиграть в баскет
+        .tabs__panel
+          picture.hero__picture
+            source(srcset="img/hero-image-1.avif", type="image/avif")
+            img.hero__image(loading="lazy", src="img/hero-image-1.webp", width="1880", alt="Два баскетболиста из противоположной команды играют в баскетбол")
+          h2.h1.hero__title Найди с кем поиграть в баскет 2
+        .tabs__panel
+          picture.hero__picture
+            source(srcset="img/hero-image-3.avif", type="image/avif")
+            img.hero__image(loading="lazy", src="img/hero-image-3.webp", width="1880", alt="Два баскетболиста из противоположной команды играют в баскетбол")
+          h2.h1.hero__title Найди с кем поиграть в баскет 3
+      ul.list-reset.tabs__nav
+        li.tabs__nav-item
+          button.btn-reset.btn-accent.tabs__nav-btn(type="button") играй
+        li.tabs__nav-item
+          button.btn-reset.btn-accent.tabs__nav-btn(type="button") учись
+        li.tabs__nav-item
+          button.btn-reset.btn-accent.tabs__nav-btn(type="button") смотри

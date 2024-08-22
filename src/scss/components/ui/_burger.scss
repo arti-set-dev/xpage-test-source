@@ -1,0 +1,59 @@
+.burger {
+  align-items: center;
+  padding: 7px 16px;
+  gap: 8px;
+
+  @include mobile {
+    padding: 9px 6px;
+    font-size: 0;
+    gap: 0;
+  }
+
+  &--active {
+    .burger__line {
+      background: transparent;
+
+      &::before {
+        top: 0;
+        transform: rotate(-45deg);
+      }
+
+      &::after {
+        top: 0;
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  &__line {
+    position: relative;
+    display: block;
+    width: 14px;
+    height: 2px;
+    background: var(--desktop-black);
+    transition: background var(--ui-transition) ease;
+
+    @include mobile {
+      width: 19px;
+    }
+
+    &::before, &::after {
+      @include pseudo;
+
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: inherit;
+      background: currentcolor;
+      transition: top var(--ui-transition) ease, transform var(--ui-transition) ease;
+    }
+
+    &::before {
+      top: -5px;
+    }
+
+    &::after {
+      top: 5px;
+    }
+  }
+}

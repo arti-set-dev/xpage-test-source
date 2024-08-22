@@ -1,0 +1,33 @@
+.btn-accent {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 20px;
+  padding: 20px 24px;
+  width: 100%;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 140%;
+  text-align: left;
+  text-transform: uppercase;
+  color: var(--desktop-white);
+  background: var(--desktop-primary-orange);
+
+  @include small-tablet {
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+
+  &::after {
+    @include pseudo;
+
+    width: 24px;
+    height: 24px;
+    background-image: url("../img/svg/right_arrow.svg");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}

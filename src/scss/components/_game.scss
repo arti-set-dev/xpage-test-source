@@ -1,0 +1,208 @@
+.game {
+  padding-top: 120px;
+
+  @include mobile {
+    padding-top: 42px;
+  }
+
+  &__container {
+    position: relative;
+  }
+
+  &__title {
+    margin-bottom: 64px;
+
+    @include mobile {
+      margin-bottom: 21px;
+    }
+  }
+
+  &__chapter-link {
+    position: absolute;
+    right: 0;
+    top: 64px;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 130%;
+    text-transform: uppercase;
+    color: var(--desktop-primary-orange);
+    gap: 12px;
+
+    @include tablet {
+      top: 39px;
+    }
+
+    @include small-tablet {
+      top: 18px;
+    }
+
+    @include mobile {
+      top: 10px;
+      font-size: 14px;
+      line-height: 140%;
+    }
+
+    &::after {
+      @include pseudo;
+
+      width: 24px;
+      height: 24px;
+      background-image: url("../img/svg/right_arrow_orange.svg");
+
+      @include mobile {
+        display: none;
+      }
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    gap: 9px;
+
+    @include mobile {
+      grid-template-columns: repeat(auto-fit, minmax(296px, 1fr));
+      gap: 8px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 20px;
+    background: var(--desktop-white);
+    transition: background var(--ui-transition) ease;
+
+    @include mobile {
+      border-radius: 10px;
+    }
+
+    &:hover {
+      background: var(--desktop-black);
+
+      .game__picture {
+        transform: translateY(-38px);
+        transition: transform var(--ui-transition) ease;
+      }
+
+      .game__item-accent {
+        color: var(--desktop-white);
+        transform: translateY(calc(-30px - (32px + 19px)));
+        transition: transform var(--ui-transition) ease 0.1s, color var(--ui-transition) ease 0.1s;
+
+        @include mobile {
+          transform: translateY(-69px);
+        }
+      }
+
+      .game__item-desc {
+        color: var(--desktop-white);
+        transform: translateY(calc(-30px - (32px * 2)));
+        transition: transform var(--ui-transition) ease 0.2s, color var(--ui-transition) ease 0.2s;
+
+        @include mobile {
+          transform: translateY(-66px);
+        }
+      }
+
+      .game__item-btn {
+        transform: translateY(0);
+        transition: transform var(--ui-transition) ease 0.3s, color var(--ui-transition) ease 0.3s;
+      }
+    }
+  }
+
+  &__picture {
+    display: block;
+    overflow: hidden;
+    margin-bottom: 38px;
+    border-radius: 0 0 50% 50%;
+    max-height: 520px;
+    line-height: 0;
+    transform: translateY(0);
+    transition: transform var(--ui-transition) ease 0.3s;
+
+    @include tablet {
+      margin-bottom: 28px;
+    }
+
+    &--ball {
+      border-radius: 0;
+      max-height: auto;
+      text-align: right;
+
+      .game__image {
+        position: relative;
+        max-height: calc(clamp(15.625rem, 16.875vw + 12.25rem, 32.5rem));
+        object-position: 117px -61px;
+        transform: scale(1.3);
+
+        @include small-tablet {
+          object-position: 46px -41px;
+        }
+      }
+    }
+  }
+
+  &__item-content {
+    margin-top: auto;
+    padding: 24px;
+
+    @include mobile {
+      padding: 12px;
+    }
+  }
+
+  &__item-accent {
+    margin-top: auto;
+    margin-bottom: 16px;
+    max-width: 554px;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 130%;
+    text-transform: uppercase;
+    color: var(--desktop-black);
+    transition: transform var(--ui-transition) ease 0.2s, color var(--ui-transition) ease 0.2s;
+
+    @include mobile {
+      margin-bottom: 8px;
+      font-size: 20px;
+    }
+  }
+
+  &__item-desc {
+    max-width: 440px;
+    font-family: var(--second-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 160%;
+    color: var(--desktop-black);
+    transition: transform var(--ui-transition) ease 0.1s, color var(--ui-transition) ease 0.1s;
+
+    @include mobile {
+      font-size: 14px;
+      line-height: 140%;
+    }
+  }
+
+  &__item-btn {
+    position: absolute;
+    left: 24px;
+    bottom: 24px;
+    margin-top: auto;
+    width: calc(100% - (24px * 2));
+    transform: translateY(calc(100% + 24px));
+    transition: transform var(--ui-transition) ease;
+
+    @include mobile {
+      left: 12px;
+      bottom: 12px;
+      width: calc(100% - (12px * 2));
+    }
+  }
+}

@@ -1,0 +1,32 @@
+-
+  const pageTitle = 'xpage sport project';
+  const lang = 'ru';
+  const css = [
+    'css/page-index.css'
+  ]
+  const js = [
+    'js/page-index.js'
+  ]
+
+doctype html
+html(lang=lang).page
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width,initial-scale=1")
+    link(rel="shortcut icon", href="favicon.ico", type="image/x-icon")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    meta(name="theme-color", content="#111111")
+    title #{pageTitle}
+    link(rel="preload", href="fonts/DrukWideCyr-Bold.woff2", as="font", type="font/woff2", crossorigin)
+    link(rel="preload", href="fonts/Commissioner-Bold.woff2", as="font", type="font/woff2", crossorigin)
+    link(rel="preload", href="fonts/Commissioner-Regular.woff2", as="font", type="font/woff2", crossorigin)
+    link(rel="stylesheet", href="css/vendor.css")
+    link(rel="stylesheet", href="css/main.css")
+    each file in css
+      link(rel="stylesheet", href=file)
+    script(defer, src="js/vendor.js")
+    script(defer, src="js/runtime.js")
+    script(defer, src="js/main.js")
+    each file in js
+      script(defer, src=file)
+  block content

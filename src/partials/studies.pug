@@ -1,0 +1,41 @@
+section.studies
+  .container.studies__container
+    h2.h1.studies__title Учись
+    a(href="#").studies__chapter-link в раздел
+    .studies__sections
+      .studies__hero
+        picture.studies__hero-picture
+          source(srcset="img/studies-image-1.avif", type="image/avif")
+          img.studies__hero-image(loading="lazy", src="img/studies-image-1.webp", alt="Детская секция по баскетболу")
+        .studies__accent мы собрали секции для детей по всему городу
+        .studies__filter.studies__hero-filter.studies__filter--accent 12 секций по всему городу
+      .studies__selection
+        .studies__accent Подбери тренера под свой  уровень
+        .studies__filters
+          a(href="#").studies__filter детская тренировка
+          a(href="#").studies__filter для начинающих
+          a(href="#").studies__filter стритбол
+          a(href="#").studies__filter выезд тренера на дом
+          a(href="#").studies__filter.studies__filter--accent 12 фильтров
+      aside.studies__aside
+        .studies__info
+          .studies__info-accent Видеоуроки
+          .studies__video-block
+            video(src="#", preload="metadata", poster="img/video-poster.webp").studies__video
+            .studies__video-content
+              .studies__info-desc Евгений Воронов: «Бронзовые медали - оценка труда нашей команды»
+              .studies__tag.studies__info-tag 26 октября
+        .studies__info
+          a(href="#").studies__info-accent.studies__info-accent--link статьи
+            svg
+              use(href="img/sprite.svg#right_arrow")
+          article.studies__article
+            h3.studies__info-desc
+              a(href="#") Евгений Воронов: «Бронзовые медали - оценка труда нашей команды»
+            .studies__tag 26 октября
+        .studies__info
+          .studies__info-accent термины
+          .studies__info-tags
+            .studies__tag треха
+            .studies__tag трехочковый бросок
+            .studies__tag.studies__tag--accent 36 терминов
